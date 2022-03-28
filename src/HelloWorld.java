@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World");
@@ -23,5 +25,13 @@ public class HelloWorld {
 
         System.out.println(Integer.MAX_VALUE);
 
+        double pi = 3.14159;
+        System.out.printf("The value of pi is approximately %.2f.", pi);
+
+        Scanner sc = new Scanner(System.in);
+//            System.out.println("Enter your first name");
+//            String userInput = sc.next();
+//            System.out.println("Hello, " + userInput + "!");
     }
 }
+
