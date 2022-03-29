@@ -39,30 +39,31 @@ public class ControlFlowExercises {
         int userInt = sc.nextInt();
         System.out.println("number | squared | cubed");
         System.out.println("------ | ------- | -----");
+
         for (int i=1; i<=userInt; i++){
             int squared = (int) Math.pow(i,2);
             int cubed = (int) Math.pow(i,3);
             System.out.println(i + "      | " + squared + "       | " + cubed);
         }
+
         System.out.println("Do you wish to continue?");
         String userAnswer = sc.next();
         if (userAnswer.equals("yes")){
             System.out.println("Please enter a number between 0 and 100.");
             int userNumber = sc.nextInt();
-            switch (userNumber) {
-                case userNumber - 88 >= 0:
-                    System.out.println("A");
-                    break;
-                case userNumber - 80 >= 0:
-                    System.out.println("B");
-                    break;
-                default:
-                    System.out.println("Ya dun goof'd");
+            if (userNumber-88>=0){
+                System.out.println("A");
+            } else if (userNumber-87>=0){
+                System.out.println("B");
+            } else if (userNumber-79>=0){
+                System.out.println("C");
+            } else if (userNumber-66>=0){
+                System.out.println("D");
+            } else {
+                System.out.println("F");
             }
-
         } else {
             System.out.println("You chose not to continue.");
         }
-
     }
 }
