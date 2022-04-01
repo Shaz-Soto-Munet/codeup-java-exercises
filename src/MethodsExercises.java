@@ -46,19 +46,40 @@ public class MethodsExercises {
         }
         return total;
     }
+
+    public static void diceRoll(int maxNum) {
+        double die = (Math.random() * maxNum) + 1;
+        int intDie = (int) die;
+        diceRoll2(maxNum);
+        System.out.println(" and " + intDie + ".");
+    }
+    public static void diceRoll2(int maxNum){
+        double die = (Math.random() * maxNum) + 1;
+        int intDie = (int) die;
+        System.out.print("Your " + maxNum + "-sided dice rolled for " + intDie);
+    }
+
+
+
     public static void main(String[] args) {
 
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        System.out.println("Your number is " + userInput + ". Do you want to continue? yes/no");
-        Scanner sc = new Scanner(System.in);
-        String doesTheUserContinue = sc.nextLine();
-        if (doesTheUserContinue.equals("yes")){
-            System.out.println(calculateFactorial(userInput));
-        } else {
-            System.out.println("You've chosen not to continue.");
-        }
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println("Your number is " + userInput + ". Do you want to continue? yes/no");
+//        Scanner sc = new Scanner(System.in);
+//        String doesTheUserContinue = sc.nextLine();
+//        if (doesTheUserContinue.equals("yes")){
+//            System.out.println(calculateFactorial(userInput));
+//        } else {
+//            System.out.println("You've chosen not to continue.");
+//        }
 
+//        --------Dice Roll---------
+
+        System.out.println("How many sides should the dice have?");
+        Scanner scanner = new Scanner (System.in);
+        int diceSides = scanner.nextInt();
+        diceRoll(diceSides);
     }
 
 }
