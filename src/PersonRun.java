@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Person {
      private String name;
 
@@ -10,13 +12,22 @@ class Person {
     }
 
     public void setName(String name){
-//TODO: change the name field to the passed value
         this.name = name;
     }
     public void sayHello(){
-//TODO: print a message to the console using the person's name
         System.out.println("Hello, " + this.name + "!");
     }
+
+    static Person[] addPerson(Person[] arrayOfPeople, String newPersonName){
+        Person[] newPeople = new Person[arrayOfPeople.length+1];
+        for (int i=0; i<arrayOfPeople.length; i++){
+            newPeople[i] = arrayOfPeople[i];
+        }
+        newPeople[arrayOfPeople.length] = new Person(newPersonName);
+        return newPeople;
+    }
+
+
 }
 
 public class PersonRun {
