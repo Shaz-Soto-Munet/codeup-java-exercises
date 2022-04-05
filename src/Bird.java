@@ -1,5 +1,5 @@
 public class Bird {
-    final String CLASS = "Aves"
+    final String CLASS = "Aves";
 
     // what kind of bird is it?
     private String name;
