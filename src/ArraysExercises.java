@@ -16,11 +16,11 @@ public class ArraysExercises {
 
         System.out.println("The length of the people array is: " + (people.length));
 
-        Person[] newPeople = Person.addPerson(people, "Juan");
+//        Person[] newPeople = Person.addPerson(people, "Juan");
 
-        for (Person person : newPeople){
-            System.out.println(person.getName());
-        }
+//        for (Person person : newPeople){
+//            System.out.println(person.getName());
+//        }
 
 
 
