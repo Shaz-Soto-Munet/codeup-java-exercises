@@ -5,6 +5,16 @@ import java.util.Scanner;
 public class Input {
     private Scanner input;
 
+    public int provideInt(){
+        System.out.println("Ayo gimme a number");
+        try {
+            return Integer.parseInt(this.getString());
+        } catch (NumberFormatException error){
+            System.out.println("That's not a number my dude");
+            return 0;
+        }
+    }
+
     public String getString(){
         return input.nextLine();
     }
